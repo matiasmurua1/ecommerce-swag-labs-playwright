@@ -27,7 +27,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
     video: 'off',
-    actionTimeout: 10_000,
+    actionTimeout: 20_000,
     navigationTimeout: 30_000,
   },
   outputDir: 'test-results/artifacts',

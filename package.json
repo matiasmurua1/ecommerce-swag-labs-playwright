@@ -14,7 +14,11 @@
     "test:login": "bddgen && playwright test --grep @login",
     "test:shopping-cart": "bddgen && playwright test --grep @shoppingCart",
     "test:report": "playwright show-report",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier . --write --ignore-unknown",
+    "format:check": "prettier . --check --ignore-unknown",
+    "quality": "npm run format:check && npm run lint && npm run typecheck"
   },
   "keywords": [
     "playwright",
@@ -25,10 +29,18 @@
   ],
   "author": "Matias Nahuel Murua Martinez",
   "license": "ISC",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "1.63.0",
     "@types/node": "^24.0.0",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
     "playwright-bdd": "9.2.1",
-    "typescript": "7.0.2"
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1"
   }
 }
