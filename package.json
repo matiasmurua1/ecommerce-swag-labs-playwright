@@ -1,0 +1,34 @@
+{
+  "name": "ecommerce-swag-labs-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automatizacion E2E de Swag Labs con Playwright, Cucumber y Page Object Model.",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:ci": "bddgen && playwright test --project=chromium",
+    "test:open": "bddgen && playwright test --ui",
+    "test:ui:chromium": "bddgen && playwright test --ui --project=chromium --ui-host=localhost --ui-port=0",
+    "test:headed": "bddgen && playwright test --project=chromium --headed",
+    "test:debug": "bddgen && playwright test --project=chromium --debug",
+    "test:login": "bddgen && playwright test --grep @login",
+    "test:shopping-cart": "bddgen && playwright test --grep @shoppingCart",
+    "test:report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "e2e",
+    "pom"
+  ],
+  "author": "Matias Nahuel Murua Martinez",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.0.0",
+    "playwright-bdd": "9.2.1",
+    "typescript": "7.0.2"
+  }
+}
